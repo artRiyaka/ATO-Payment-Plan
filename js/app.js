@@ -380,7 +380,7 @@
     const result = assessment();
     const act = actions();
     const sit = situation(record, result, act);
-    const [status, tone] = pillMeta(sit);
+    const [status] = pillMeta(sit);
     const instalmentNote = sit === "declined" && record.lodgedOffer
       ? `Lodged was ${phrase(record.lodgedOffer.amount, record.lodgedOffer.frequency)}`
       : `${each(result.frequency)} · ${result.payments || 0} payments`;
